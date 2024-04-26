@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Item from "./Item";
+import ItemForm from "./Item";
 import Filter from "./Filter";
+import Item from "./Item";
 
 function ShoppingList({ items }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,6 +18,7 @@ function ShoppingList({ items }) {
 
   return (
     <div className="ShoppingList">
+      <ItemForm />
       <Filter onCategoryChange={handleCategoryChange} />
       <ul className="Items">
         {itemsToDisplay.map((item) => (
